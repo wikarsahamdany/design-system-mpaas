@@ -1,4 +1,16 @@
 
 <view>
   <text>wassaps bruh</text>
+  <text>^^ yang nulis numpahin kopi ke gua</text>
+</view>
+
+<view onTap="handleButtonIncrement">
+  <btn>
+    Plus button
+  </btn>
+</view>
+<view onTap="handleButtonDecrement">
+  <btn>
+    Minus button
+  </btn>
 </view>

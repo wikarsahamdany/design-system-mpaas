@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "text" : "/component/text/text"
+    "text" : "/component/text/text",
+    "btn" : "/component/btn/btn"
   }
 }

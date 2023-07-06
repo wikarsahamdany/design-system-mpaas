@@ -1,4 +1,7 @@
 Page({
+  data:{
+    count: 0
+  },
   onLoad(query) {
     // 页面加载
     console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
@@ -32,4 +35,12 @@ Page({
       path: 'pages/index/index',
     };
   },
+  handleButtonIncrement() {
+    this.data.count++
+    console.log(this.data.count)
+  },
+  handleButtonDecrement() {
+    this.data.count--
+    console.log(this.data.count)
+  }
 });

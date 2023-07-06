@@ -1,0 +1,22 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  padding: 10rpx 20rpx;
+  background-color: #db630d;
+  color: #FFF;
+  font-size: 40rpx;
+  font-weight: 500;
+  border-radius: 40rpx;
+  margin: 5rpx;
+}
+
+.button-hover {
+  background-color: khaki;
+}
+
+.button[disabled] {
+  background-color: #CCCCCC;
+  color: #888888;
+}
