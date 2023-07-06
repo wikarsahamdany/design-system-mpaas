@@ -1,0 +1,6 @@
+<view>
+  <view class="h1">
+    ini contoh membuat content dalam tag , menggunakan tag slot
+  </view>
+  <slot></slot>
+</view>
