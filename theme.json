@@ -1,0 +1,8 @@
+{
+  "theme": {
+    "brand-primary": "#ca43cc",
+    "brand-success": "#52c41a",
+    "brand-warning": "#faad14",
+    "brand-error": "#f5222d"
+  }
+}

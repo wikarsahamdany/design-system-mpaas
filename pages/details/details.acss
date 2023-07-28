@@ -1,0 +1,35 @@
+.view-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  padding: 10rpx 20rpx;
+  background-color: #f3aa03;
+  color: #FFF;
+  font-size: 40rpx;
+  font-weight: 500;
+  border-radius: 40rpx;
+  margin: 10rpx;
+  box-shadow: none;
+}

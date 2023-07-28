@@ -1,6 +1,12 @@
 {
   "usingComponents": {
-    "text" : "/component/text/text",
-    "btn" : "/component/btn/btn"
+    "btn" : "/component/btn/btn",
+    "form": "/component/form/form",
+    "container" : "antd-mini/es/Container/index",
+    "button" : "antd-mini/es/Button/index",
+    "input" : "antd-mini/es/Input/index",
+    "icon" : "antd-mini/es/Icon/index",
+    "avatar" : "antd-mini/es/Avatar/index",
+    "list-item" : "antd-mini/es/List/ListItem/index"
   }
 }

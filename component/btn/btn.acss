@@ -12,6 +12,20 @@
   margin: 5rpx;
 }
 
+.button-fail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  padding: 10rpx 20rpx;
+  background-color: #ff0404f7;
+  color: #FFF;
+  font-size: 40rpx;
+  font-weight: 500;
+  border-radius: 40rpx;
+  margin: 5rpx;
+}
+
 .button-hover {
   background-color: khaki;
 }

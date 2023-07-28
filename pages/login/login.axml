@@ -1,0 +1,53 @@
+<view class="container">
+  <notice className="notice" a:if="{{ error.status }}" type="error">{{error.message}}</notice>
+
+  <view id="image-section">
+    <image src="/assets/logo-bni.png" />
+  </view>
+
+  <view id="login-form">
+
+    <view class="title-form">
+      <text>
+        Login
+      </text>
+    </view>
+
+    <view>
+
+
+      <form id="form-container" onSubmit="submitHandler">
+        <input name="username" placeholder="username" />
+        <input name="password" password=true placeholder="password" />
+        <button inline form-type="submit">Submit</button>
+      </form>
+    </view>
+
+  </view>
+  <popup position="bottom" animation={{true}} height={{600}} visible={{agreementModal}}>
+    <scroll-view
+      id="scrollview-modal"
+      disable-lower-scroll="out-of-bounds"
+      disable-upper-scroll="out-of-bounds"
+      scroll-y="{{true}}"
+    >
+      <agreement-modal  ></agreement-modal>
+
+    </scroll-view>
+  </popup>
+
+  <view id="misc-section">
+
+    <view class="misc-list">
+      <icon type="BankcardOutline" />
+      <text>Top Up E-Wallet</text>
+    </view>
+
+    <view class="misc-list">
+      <icon type="ScanningOutline" />
+      <text>Pembayaran QR</text>
+    </view>
+
+  </view>
+  
+</view>

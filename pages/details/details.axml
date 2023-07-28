@@ -1,0 +1,7 @@
+<container class="view-container">
+  <image mode="aspectFit" src="{{user.image}}" class="container-img" />
+  <view class="view-page">
+    {{user.firstName}} {{user.maidenName}} {{user.lastName}}
+  </view>
+  <button size="default" type="primary" onTap="openLocation" class="button">Location</button>
+</container>

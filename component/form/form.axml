@@ -1,0 +1,4 @@
+<view class="form-container">
+  <input class="form-input" placeholder="Enter your name" onInput="handleInput" />
+  <button class="form-button" onTap="handleSubmit">Submit</button>
+</view>

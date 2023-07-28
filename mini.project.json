@@ -1,0 +1,15 @@
+{
+  "enableNodeModuleBabelTransform": true,
+  "enableAppxNg": true,
+  "component2": true,
+  "compileType": "mini",
+  "format": 2,
+  "compileOptions": {
+    "less": {
+      "modifyVars": {
+        "theme": "dark",
+        "ant-button-primary": "green"
+      }
+    }
+  }
+}

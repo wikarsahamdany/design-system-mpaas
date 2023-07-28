@@ -1,9 +1,15 @@
 {
   "subPackageBuildType": "shared",
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/details/details",
+    "pages/bniquarium/bniquarium",
+    "pages/login/login",
+    "pages/splash-screen/splash-screen"
   ],
   "window": {
-    "defaultTitle": "My App"
-  }
+    "defaultTitle": "BNI",
+    "titleBarColor": "#0e8fea"
+  },
+  "useDynamicPlugins": true
 }

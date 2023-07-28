@@ -1,46 +1,77 @@
 Page({
   data:{
-    count: 0
+    count: 0,
+    inputValue: '',
+    users: null
   },
   onLoad(query) {
-    // 页面加载
     console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
   },
-  onReady() {
-    // 页面加载完成
-  },
-  onShow() {
-    // 页面显示
-  },
-  onHide() {
-    // 页面隐藏
-  },
-  onUnload() {
-    // 页面被关闭
-  },
-  onTitleClick() {
-    // 标题被点击
-  },
-  onPullDownRefresh() {
-    // 页面被下拉
-  },
-  onReachBottom() {
-    // 页面被拉到底部
-  },
   onShareAppMessage() {
-    // 返回自定义分享信息
     return {
       title: 'My App',
       desc: 'My App description',
       path: 'pages/index/index',
     };
   },
-  handleButtonIncrement() {
-    this.data.count++
-    console.log(this.data.count)
+  onChange(e) {
+    this.setData({
+      inputValue: e
+    })
   },
-  handleButtonDecrement() {
-    this.data.count--
-    console.log(this.data.count)
+  submitHandler() {
+    if (this.data.inputValue.length === 0){
+      my.alert({
+        content: "Please Input User's Name"
+      })
+    } else {
+      my.showLoading({
+        content: 'Please wait...',
+        success: () => {
+          setTimeout(() => {
+            my.request({
+              url:  `https://dummyjson.com/users/search?q=${this.data.inputValue}`,
+              success: (res) => {
+                this.setData({
+                  users: res.data.users
+                })
+              },
+              fail: () => {
+                my.alert({
+                  content: 'Oops! something went horribly wrong!!'
+                })
+              }
+            });
+            my.hideLoading();
+          }, 3000)
+        },
+        fail: (err) => {
+          console.log(err)
+        }
+      })
+    }
+  },
+  onConfirm(){
+    this.submitHandler()
+  },
+  previewImage(e){
+    console.log(e.target.dataset.id)
+    my.navigateTo({
+      url: `/pages/details/details?id=${e.target.dataset.id}`
+    })
+  },
+  bniquarium(){
+    my.navigateTo({
+      url: "/pages/bniquarium/bniquarium"
+    })
+  },
+  logoutHandler() {
+    my.clearStorageSync()
+    my.navigateTo({
+      url: '/pages/login/login'
+    })
+    my.alert({
+      content: "Logout successful!"
+    })
   }
 });

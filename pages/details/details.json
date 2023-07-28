@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "container" : "antd-mini/es/Container/index",
+    "button" : "antd-mini/es/Button/index"
+  }
+}

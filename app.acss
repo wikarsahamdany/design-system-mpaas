@@ -1,3 +1,29 @@
-page {
-  background: #f7f7f7;
+:root {
+  --primary-color: blue;
+  --secondary-color: green;
+}
+
+/* Apply the custom theme to specific elements */
+body {
+  background-color: var(--primary-color);
+}
+
+h1 {
+  color: var(--secondary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+/* Additional styling based on the custom theme */
+.container {
+  border: 2px solid var(--secondary-color);
+}
+
+.link {
+  color: var(--primary-color);
+  text-decoration: underline;
 }

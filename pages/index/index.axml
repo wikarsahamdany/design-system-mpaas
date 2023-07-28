@@ -1,16 +1,64 @@
+<view class="page-set-wide">
+  <container class="container-round-game">
+    <text class="game-title">Gamification</text>
+    <view class="game-container">
+      <button size="default" type="primary" class="button" hover-class="button-hover" onTap="bniquarium">
+        <image class="button-game-icon" mode="aspectFit" src="/assets/fish.png" />
+      </button>
+      <button size="default" type="primary" class="button" hover-class="button-hover" onTap="submitHandler" disabled>
+        <image class="button-game-icon" mode="aspectFit" src="/assets/secured-lock.png" />
+      </button>  
+    </view>
+  </container>
+  <container class="container-round">
+    <input
+      placeholder="Search User Here!"
+      onChange="onChange"
+      className="search-bar"
+      focusClassName="search-bar-focus"
+      confirm-type="search"
+      allowClear
+      focus
+      onConfirm="onConfirm"
+    >
+    <icon slot="prefix" type="SearchOutline" />
+    <icon slot="suffix" type="AudioOutline" />
+    </input>
+    <button size="default" type="primary" class="button" hover-class="button-hover" onTap="submitHandler">Search</button>
+    <button class="button-fail" size="mini" type="warn" onTap="logoutHandler">Logout</button>
 
-<view>
-  <text>wassaps bruh</text>
-  <text>^^ yang nulis numpahin kopi ke gua</text>
+  </container>
 </view>
-
-<view onTap="handleButtonIncrement">
-  <btn>
-    Plus button
-  </btn>
+<block a:if="{{users.length}}">
+  <view class="negative-result">
+    {{users.length}} Users Found
+  </view>
+  <view a:for="{{users}}" a:for-item="user" a:key="index" class="card">
+    <container class="card-container">
+      <list-item
+        imageSize="large"
+        brief="{{user.email}} {{user.phone}}"
+        onTap="previewImage"
+        data-id={{user.id}}
+      >
+      <view slot="brief" class="brief-content">
+        <icon type="MailOutline" class="brief-icon"/> <view class="brief-email">{{user.email}}</view> 
+        <icon type="PhoneFill" class="brief-icon"/> <view class="brief-email">{{user.phone}}</view>
+      </view>
+        {{user.firstName}} {{user.lastName}}
+        <avatar
+          slot="image"
+          name="{{user.firstName}} | {{user.lastName}}"
+          desc="{{user.email}}"
+          src="{{user.image}}"
+        />
+      </list-item>
+    </container>
+  </view>
+</block>
+<view a:elif="{{ users === null }}" class="negative-result">
+  Search user
 </view>
-<view onTap="handleButtonDecrement">
-  <btn>
-    Minus button
-  </btn>
+<view a:else class="negative-result">
+  No user Found!
 </view>
